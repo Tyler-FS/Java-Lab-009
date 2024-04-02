@@ -12,11 +12,15 @@
 
 1. Using the [Python Tutor code visualizer](https://pythontutor.com/java.html#mode=edit) for Java, capture an image of a diagram showing the local variables and parameters of main and riddle just before riddle returns for the code below.
     * Save the image taken above to your project as Part1_2.jpg.
+
+      ![Part1_2](Part1_2.png)
+
 2. Answer the following question in the **text** block below:
     * Is the **blank** object mutable or immutable? How can you tell?
 
 ```text
 PUT ANSWER TO #2 HERE
+The blank object is mutable as its attributes can be modified. The Point data type is mutable.  
 ```
 
 ```java
@@ -41,13 +45,18 @@ public class Puzzler {
 
 3. Using the [Python Tutor code visualizer](https://pythontutor.com/java.html#mode=edit) for Java, capture a stack diagram showing the state of the below program just before **findCenter** returns.
     * Save the image taken above to your project as Part1_3.jpg.
+   ![Part1_3](Part1_3.png)
 4. Using the [Python Tutor code visualizer](https://pythontutor.com/java.html#mode=edit) for Java, capture a stack diagram showing the state of the program just before **distance** returns.
     * Save the image taken above to your project as Part1_4.jpg.
+   ![Part1_4](Part1_4.png)
 5. Answer the following question below in the **text** block below:
     * Explain how the return values from #3 and #4 differ.
 
 ```text
-PUT ANSWER TO #5 HERE
+findCenter returns a reference to a new Point object and calculates the values for x and y from the Rectangle's attributes. 
+
+distance returns a double representing the distance between two Point objects.
+
 ```
 
 ```java
@@ -83,18 +92,20 @@ Recall that aliases are two variables that refer to the same object.
 
 1. Using the [Python Tutor code visualizer](https://pythontutor.com/java.html#mode=edit) for Java, capture a diagram that shows the state of the program just before the end of main.
     * Save the image taken above to your project as Part2_1.jpg.
+   ![Part2_1](Part2_1.png)
 2. What is the output of the program?
     * Put the output in the text block below
 
 ```text
-PUT ANSWER TO #2 HERE
+(5, 8)
+(5, 8)
 ```
 
 3. At the end of main, are p1 and p2 aliased? Why or why not?
     * Put your answer in the text block below
 
 ```text
-PUT ANSWER TO #3 HERE
+p1 and p2 are not aliased. Although the attributes of each Point are the same, when findCenter is executed a new object is created for p1 and again for p2 to refer to. At the end of main they each refer to a different object despite those objects having similar attributes. 
 ```
 
 ```java
@@ -140,8 +151,12 @@ for (int i = 0; i < s.length(); i++) {
 1. Encapsulate the above fragment in a method in the [StringPlayground](src/StringPlayground.java) class that takes a string argument and returns the final value of count.
 2. Test your method with multiple strings, including some that are balanced and some that are not.
     * Screenshot your output and add it to your project as Part3_2.jpg
+   ![Part3_2](Part3_2.png)
 3. Generalize the code so that it works on any string.
     * What could you do to generalize it more?
+   ```text
+   I have generalized for any kind of string by having the method accept an argument for opening and closing characters so it works for more than just parentheses. It could be generalized further by accepting strings instead of characters so it can check for collections of characters or full strings within a larger string. It may also be appropriate to have the method return a boolean value. 
+   ```
 
 ## Part 4: Large Numbers
 
